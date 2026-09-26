@@ -11,7 +11,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-<!-- ⭐ AD 1: Social Bar (100% coverage, high CPM) -->
+<!-- ⭐ AD 1: Social Bar -->
 <script src="https://pl31508345.profitableratecpmnetwork.com/0a/88/b2/0a88b2a6521f14f0c652d063cc234ba8.js"></script>
 
 <style>
@@ -27,17 +27,12 @@
 
 :root {
     --bg-1: #0b1120;
-    --bg-2: #131c33;
-    --card: #1e293b;
     --text: #f8fafc;
     --dim: #94a3b8;
     --accent: #6366f1;
-    --accent-hover: #4f46e5;
     --gold: #fbbf24;
     --gold-2: #f59e0b;
     --success: #22c55e;
-    --border: #334155;
-    --pink: #ec4899;
 
     --safe-top: env(safe-area-inset-top, 0px);
     --safe-bottom: env(safe-area-inset-bottom, 0px);
@@ -56,6 +51,8 @@ body {
         radial-gradient(circle at 20% 0%, rgba(99,102,241,0.12), transparent 50%),
         radial-gradient(circle at 80% 100%, rgba(251,191,36,0.08), transparent 50%);
     background-attachment: fixed;
+    /* ⭐ Whole page clickable for ad */
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar { width: 8px; }
@@ -66,7 +63,7 @@ body {
 }
 
 /* ============================================================
-   HERO — full-screen cat chaos playground
+   HERO — Cat playground
    ============================================================ */
 .hero {
     position: relative;
@@ -80,7 +77,6 @@ body {
     overflow: hidden;
     padding: calc(30px + var(--safe-top)) 20px calc(30px + var(--safe-bottom));
     text-align: center;
-    cursor: pointer; /* clicking anywhere here = popunder */
 }
 
 .hero-bg {
@@ -92,7 +88,6 @@ body {
         linear-gradient(180deg, #0b1120 0%, #0b1120 100%);
 }
 
-/* Twinkling stars */
 .stars {
     position: absolute;
     inset: 0;
@@ -116,7 +111,6 @@ body {
     50%      { opacity: 1; transform: scale(1.4); }
 }
 
-/* Ground */
 .ground {
     position: absolute;
     bottom: 0;
@@ -132,13 +126,7 @@ body {
 }
 
 /* Trees */
-.tree {
-    position: absolute;
-    bottom: 12vh;
-    z-index: 3;
-    pointer-events: none;
-}
-
+.tree { position: absolute; bottom: 12vh; z-index: 3; pointer-events: none; }
 .tree .trunk {
     position: absolute;
     bottom: 0;
@@ -149,7 +137,6 @@ body {
     background: linear-gradient(180deg, #4a2c1a, #2c1810);
     border-radius: 4px;
 }
-
 .tree .crown {
     position: absolute;
     bottom: 50px;
@@ -161,14 +148,13 @@ body {
     border-radius: 50%;
     box-shadow: 0 8px 20px rgba(34,197,94,0.3);
 }
-
 .tree.t-left  { left: 5%; transform: scale(0.9); }
 .tree.t-right { right: 5%; transform: scale(1); }
 .tree.t-mid   { left: 20%; transform: scale(0.7); bottom: 15vh; }
 .tree.t-mid2  { right: 22%; transform: scale(0.75); bottom: 16vh; }
 
 /* ============================================================
-   CATS EVERYWHERE — Chaos mode
+   CATS
    ============================================================ */
 .cat-zone {
     position: absolute;
@@ -182,7 +168,7 @@ body {
     position: absolute;
     width: 52px;
     height: 44px;
-    pointer-events: auto; /* interactive! */
+    pointer-events: auto;
     cursor: pointer;
     animation: catWander 12s ease-in-out infinite;
     transition: transform 0.3s;
@@ -190,7 +176,6 @@ body {
 
 .cat:active { transform: scale(1.2) !important; }
 
-/* Cat body */
 .cat .cat-body {
     position: absolute;
     bottom: 6px;
@@ -203,7 +188,6 @@ body {
     box-shadow: inset -3px -3px 6px rgba(0,0,0,0.18);
 }
 
-/* Cat head */
 .cat .cat-head {
     position: absolute;
     top: 0;
@@ -216,7 +200,6 @@ body {
     z-index: 2;
 }
 
-/* Ears */
 .cat .ear {
     position: absolute;
     top: -5px;
@@ -226,10 +209,8 @@ body {
     border-right: 6px solid transparent;
     border-bottom: 10px solid var(--cat-color, #f59e0b);
 }
-
 .cat .ear.left  { left: 1px; transform: rotate(-12deg); }
 .cat .ear.right { right: 1px; transform: rotate(12deg); }
-
 .cat .ear::after {
     content: '';
     position: absolute;
@@ -242,7 +223,6 @@ body {
     border-bottom: 6px solid rgba(255,150,150,0.7);
 }
 
-/* Eyes */
 .cat .cat-eye {
     position: absolute;
     top: 10px;
@@ -252,7 +232,6 @@ body {
     border-radius: 50%;
     animation: catBlink 5s infinite;
 }
-
 .cat .cat-eye.left  { left: 7px; }
 .cat .cat-eye.right { right: 7px; }
 
@@ -261,7 +240,6 @@ body {
     93%           { transform: scaleY(0.1); }
 }
 
-/* Nose */
 .cat .nose {
     position: absolute;
     top: 18px;
@@ -273,7 +251,6 @@ body {
     border-radius: 50%;
 }
 
-/* Whiskers */
 .cat .whisker {
     position: absolute;
     top: 18px;
@@ -282,11 +259,9 @@ body {
     background: rgba(0,0,0,0.35);
     border-radius: 1px;
 }
-
 .cat .whisker.left  { left: -3px; transform: rotate(-10deg); }
 .cat .whisker.right { right: -3px; transform: rotate(10deg); }
 
-/* Tail */
 .cat .tail {
     position: absolute;
     right: -12px;
@@ -304,7 +279,6 @@ body {
     50%      { transform: rotate(25deg); }
 }
 
-/* Cat colors */
 .cat.c1 { --cat-color: #f59e0b; }
 .cat.c2 { --cat-color: #78716c; }
 .cat.c3 { --cat-color: #1f2937; }
@@ -314,14 +288,12 @@ body {
 .cat.c7 { --cat-color: #06b6d4; }
 .cat.c8 { --cat-color: #f472b6; }
 
-/* Sleeping / sitting variants */
 .cat.sitting .cat-body {
     width: 46px;
     height: 34px;
     border-radius: 50% 50% 40% 40% / 60% 60% 40% 40%;
 }
 
-/* Speech bubble — "Touch Me" */
 .cat .bubble {
     position: absolute;
     top: -32px;
@@ -362,17 +334,12 @@ body {
     transform: translateX(-50%) scale(1);
 }
 
-/* Running cat animation */
-.cat.running .tail {
-    animation: tailRun 0.3s ease-in-out infinite;
-}
-
+.cat.running .tail { animation: tailRun 0.3s ease-in-out infinite; }
 @keyframes tailRun {
     0%, 100% { transform: rotate(-35deg); }
     50%      { transform: rotate(35deg); }
 }
 
-/* Cat jumping/bouncing across screen */
 @keyframes catWander {
     0%, 100% { transform: translate(0, 0) rotate(0deg); }
     25%      { transform: translate(30px, -8px) rotate(-3deg); }
@@ -393,12 +360,6 @@ body {
     100% { transform: translate(-300px, 40px) rotate(-8deg); }
 }
 
-/* "Touch me" wander speech bubble pulse */
-@keyframes bubblePulse {
-    0%, 100% { transform: translateX(-50%) scale(1); }
-    50%      { transform: translateX(-50%) scale(1.08); }
-}
-
 /* ============================================================
    HERO CONTENT
    ============================================================ */
@@ -408,11 +369,6 @@ body {
     max-width: 460px;
     width: 100%;
     animation: fadeUp 1s ease;
-    pointer-events: none; /* let clicks through to cat layer */
-}
-
-.hero-content > * {
-    pointer-events: auto; /* but content elements clickable */
 }
 
 @keyframes fadeUp {
@@ -513,7 +469,7 @@ body {
     50%      { opacity: 0.4; }
 }
 
-/* MAIN DOWNLOAD BUTTON */
+/* ⭐ TOP BUTTON — ads only */
 .download-btn {
     display: flex;
     align-items: center;
@@ -551,7 +507,6 @@ body {
     transform: translateY(-3px) scale(1.02);
     box-shadow: 0 14px 36px rgba(251,191,36,0.6);
 }
-
 .download-btn:hover::before { transform: translateX(100%); }
 .download-btn:active { transform: translateY(-1px) scale(0.99); }
 
@@ -594,163 +549,54 @@ body {
 }
 
 /* ============================================================
-   SECTIONS
+   AD STACK — 30 slots
    ============================================================ */
-.section {
-    position: relative;
-    padding: 70px 24px;
-    max-width: 1100px;
-    margin: 0 auto;
-    z-index: 5;
-}
-
-.section-title {
-    font-size: clamp(26px, 5.5vw, 40px);
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: 12px;
-    background: linear-gradient(180deg, #fff, #a5b4fc);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: -0.5px;
-}
-
-.section-sub {
-    text-align: center;
-    color: var(--dim);
-    font-size: 14px;
-    max-width: 520px;
-    margin: 0 auto 44px;
-    line-height: 1.7;
-}
-
-/* Feature grid */
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 18px;
-}
-
-.feature-card {
-    background: linear-gradient(160deg, rgba(30,41,59,0.7), rgba(15,23,42,0.85));
-    border: 1px solid rgba(99,102,241,0.2);
-    border-radius: 18px;
-    padding: 26px 20px;
-    text-align: center;
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    backdrop-filter: blur(10px);
-    /* ⭐ entire card is clickable → ad */
-    cursor: pointer;
-}
-
-.feature-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(99,102,241,0.55);
-    box-shadow: 0 20px 40px rgba(99,102,241,0.25);
-}
-
-.feature-card .fc-icon {
-    width: 58px;
-    height: 58px;
-    margin: 0 auto 14px;
-    border-radius: 16px;
-    background: linear-gradient(135deg, var(--accent), #8b5cf6);
+.ad-stack {
+    padding: 40px 16px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-size: 26px;
-    box-shadow: 0 8px 20px rgba(99,102,241,0.4);
-}
-
-.feature-card h3 {
-    font-size: 16px;
-    font-weight: 700;
-    margin-bottom: 8px;
-}
-
-.feature-card p {
-    font-size: 13px;
-    color: var(--dim);
-    line-height: 1.7;
-}
-
-/* ============================================================
-   AD ZONES
-   ============================================================ */
-.ad-zone {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 24px 16px;
-    margin: 0 auto;
+    gap: 22px;
     max-width: 100%;
     overflow: hidden;
     position: relative;
     z-index: 4;
-    min-height: 60px;
-    /* ⭐ whole zone clickable → ad trigger */
-    cursor: pointer;
 }
 
-.ad-zone.tall { min-height: 280px; padding: 30px 16px; }
-
-.ad-inner {
+.ad-slot {
     width: 100%;
-    max-width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 12px;
-    pointer-events: auto;
-}
-
-.native-container {
-    width: 100%;
-    max-width: 720px;
+    min-height: 60px;
+    padding: 10px;
     border-radius: 14px;
+    background: linear-gradient(160deg, rgba(30,41,59,0.4), rgba(15,23,42,0.6));
+    border: 1px solid rgba(99,102,241,0.15);
     overflow: hidden;
-    min-height: 100px;
+}
+
+.ad-slot.tall { min-height: 280px; }
+
+.ad-slot.native-slot {
+    min-height: 120px;
+    background: linear-gradient(160deg, rgba(30,41,59,0.35), rgba(15,23,42,0.55));
 }
 
 /* ============================================================
-   CLICK TARGET BANNERS — invisible clickable strips
-   (spread across the page; click anywhere → ad income)
-   ============================================================ */
-.click-strip {
-    width: 100%;
-    height: 40px;
-    margin: 6px 0;
-    background: transparent;
-    cursor: pointer;
-    position: relative;
-}
-
-.click-strip::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, transparent, rgba(99,102,241,0.08), transparent);
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.click-strip:hover::after { opacity: 1; }
-
-/* ============================================================
-   FINAL CTA
+   FINAL CTA — REAL DOWNLOAD (no ads!)
    ============================================================ */
 .final-cta {
     text-align: center;
-    padding: 60px 24px 80px;
-    background: radial-gradient(ellipse at 50% 100%, rgba(99,102,241,0.25) 0%, transparent 70%);
+    padding: 70px 24px 60px;
+    background: radial-gradient(ellipse at 50% 100%, rgba(34,197,94,0.18) 0%, transparent 70%);
 }
 
 .final-cta h2 {
-    font-size: clamp(26px, 5.5vw, 40px);
+    font-size: clamp(28px, 6vw, 42px);
     font-weight: 900;
     margin-bottom: 10px;
-    background: linear-gradient(180deg, #fff, #fbbf24);
+    background: linear-gradient(180deg, #fff, #22c55e);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -765,9 +611,70 @@ body {
     font-weight: 500;
 }
 
-.final-cta .download-btn {
-    max-width: 380px;
-    margin: 0 auto;
+/* ⭐ REAL DOWNLOAD BUTTON (green, no ads) */
+.real-download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 22px 36px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+    border: none;
+    border-radius: 18px;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 10px 30px rgba(34,197,94,0.55);
+    font-family: inherit;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.real-download-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.5) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.real-download-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 16px 40px rgba(34,197,94,0.75);
+}
+.real-download-btn:hover::before { transform: translateX(100%); }
+.real-download-btn:active { transform: scale(0.99); }
+
+.real-download-btn .icon {
+    font-size: 26px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
+}
+
+.real-download-btn .btn-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.15;
+}
+
+.real-download-btn .btn-text small {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    opacity: 0.85;
+    text-transform: uppercase;
+}
+
+.real-download-btn .btn-text strong {
+    font-size: 18px;
+    font-weight: 900;
 }
 
 /* ============================================================
@@ -781,8 +688,6 @@ footer {
     color: var(--dim);
     position: relative;
     z-index: 5;
-    /* clickable for ad income */
-    cursor: pointer;
 }
 
 footer .footer-brand {
@@ -790,11 +695,6 @@ footer .footer-brand {
     letter-spacing: 3px;
     color: #a5b4fc;
     margin-bottom: 6px;
-}
-
-footer a {
-    color: var(--accent);
-    text-decoration: none;
 }
 
 /* ============================================================
@@ -809,10 +709,10 @@ footer a {
 @media (max-width: 480px) {
     .download-card { padding: 18px 16px; border-radius: 18px; }
     .download-btn { padding: 16px 18px; }
-    .section { padding: 50px 18px; }
-    .feature-card { padding: 22px 18px; }
+    .ad-stack { padding: 30px 12px; gap: 16px; }
     .cat { width: 40px; height: 34px; }
     .cat .bubble { font-size: 8px; padding: 3px 6px; }
+    .real-download-btn { padding: 18px 24px; font-size: 16px; }
 }
 
 @media (max-width: 380px) {
@@ -832,23 +732,20 @@ footer a {
 <body>
 
 <!-- ============================================================
-     HERO — CAT PLAYGROUND
+     HERO
      ============================================================ -->
 <section class="hero" id="heroZone">
     <div class="hero-bg"></div>
     <div class="stars" id="stars"></div>
     <div class="ground"></div>
 
-    <!-- Trees -->
     <div class="tree t-left"><div class="trunk"></div><div class="crown"></div></div>
     <div class="tree t-mid"><div class="trunk"></div><div class="crown"></div></div>
     <div class="tree t-mid2"><div class="trunk"></div><div class="crown"></div></div>
     <div class="tree t-right"><div class="trunk"></div><div class="crown"></div></div>
 
-    <!-- ⭐ CAT CHAOS ZONE — 30 cats populated by JS -->
     <div class="cat-zone" id="catZone"></div>
 
-    <!-- HERO CONTENT -->
     <div class="hero-content">
         <h1 class="hero-title">URA<span class="dot">.</span></h1>
         <p class="hero-sub">A World Of Cats Awaits</p>
@@ -860,288 +757,261 @@ footer a {
                 <span>• 12 MB</span>
             </div>
 
-            <!-- ⭐ DOWNLOAD BUTTON — NO ad on click -->
-            <a id="downloadBtn"
-               class="download-btn"
-               href="/downloads/ura.apk"
-               download="URA.apk"
-               rel="noopener"
-               onclick="handleDownload(event)">
+            <!-- ⭐ TOP "DOWNLOAD FREE" — ads only, no download -->
+            <button id="topAdButton"
+                    class="download-btn"
+                    type="button"
+                    onclick="handleTopAdClick(event)">
                 <span class="icon">⬇</span>
                 <span class="btn-text">
                     <small>Android App</small>
                     <strong>Download Free</strong>
                 </span>
-            </a>
+            </button>
         </div>
     </div>
 </section>
 
 <!-- ============================================================
-     SECTION 1 — Features (clickable cards → ad)
+     ⭐ 30 AD SLOTS — middle of page
      ============================================================ -->
-<section class="section">
-    <h2 class="section-title">Everything In One App</h2>
-    <p class="section-sub">Fast, secure, and beautifully simple. URA brings it all together.</p>
+<div class="ad-stack" id="adStack">
 
-    <div class="features">
-        <div class="feature-card" onclick="triggerAd()">
-            <div class="fc-icon">⚡</div>
-            <h3>Lightning Fast</h3>
-            <p>Opens in a blink. Runs smoothly even on older devices.</p>
-        </div>
-        <div class="feature-card" onclick="triggerAd()">
-            <div class="fc-icon">🔐</div>
-            <h3>Secure by Design</h3>
-            <p>Your data stays private. Always encrypted end-to-end.</p>
-        </div>
-        <div class="feature-card" onclick="triggerAd()">
-            <div class="fc-icon">📡</div>
-            <h3>Works Offline</h3>
-            <p>No internet? No problem. URA keeps working.</p>
-        </div>
-        <div class="feature-card" onclick="triggerAd()">
-            <div class="fc-icon">🌊</div>
-            <h3>Smooth Motion</h3>
-            <p>Every swipe, tap, and gesture feels natural.</p>
-        </div>
-        <div class="feature-card" onclick="triggerAd()">
-            <div class="fc-icon">🎯</div>
-            <h3>No Bloat</h3>
-            <p>Only 12 MB. Zero ads inside. Pure app.</p>
-        </div>
-        <div class="feature-card" onclick="triggerAd()">
-            <div class="fc-icon">🚀</div>
-            <h3>Always Updating</h3>
-            <p>Fresh features every week. Built with feedback.</p>
-        </div>
-    </div>
-</section>
-
-<!-- ⭐ AD ZONE 1 — 468x60 banner -->
-<div class="ad-zone" onclick="triggerAd()">
-    <div class="ad-inner">
+    <!-- Slot 1 — 468x60 -->
+    <div class="ad-slot">
         <script type="text/javascript">
-          atOptions = {
-            'key' : 'ffd5efad0be666ffef826f5b8da79675',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
-          };
+          atOptions = { 'key' : 'ffd5efad0be666ffef826f5b8da79675', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
         </script>
         <script type="text/javascript" src="https://www.highrevenueformat.com/ffd5efad0be666ffef826f5b8da79675/invoke.js"></script>
     </div>
-</div>
 
-<!-- Invisible click strip -->
-<div class="click-strip" onclick="triggerAd()"></div>
-
-<!-- ============================================================
-     SECTION 2 — More info
-     ============================================================ -->
-<section class="section">
-    <h2 class="section-title">Made For Everyone</h2>
-    <p class="section-sub">Whether you're a student, a creator, or just someone who wants a cleaner app — URA fits right in.</p>
-
-    <div class="features">
-        <div class="feature-card" onclick="triggerAd()">
-            <div class="fc-icon">🎨</div>
-            <h3>Beautiful Design</h3>
-            <p>Clean interface that respects your eyes and your time.</p>
-        </div>
-        <div class="feature-card" onclick="triggerAd()">
-            <div class="fc-icon">🌍</div>
-            <h3>Multi Language</h3>
-            <p>Available in many languages. Yours is included.</p>
-        </div>
-        <div class="feature-card" onclick="triggerAd()">
-            <div class="fc-icon">💬</div>
-            <h3>Real Support</h3>
-            <p>Actual humans answer. No bots. No waiting forever.</p>
-        </div>
-        <div class="feature-card" onclick="triggerAd()">
-            <div class="fc-icon">📱</div>
-            <h3>Any Android</h3>
-            <p>Works on Android 7 and above. Old phone? Still fine.</p>
-        </div>
-    </div>
-</section>
-
-<!-- ⭐ AD ZONE 2 — 320x50 banner -->
-<div class="ad-zone" onclick="triggerAd()">
-    <div class="ad-inner">
+    <!-- Slot 2 — 320x50 -->
+    <div class="ad-slot">
         <script type="text/javascript">
-          atOptions = {
-            'key' : '77e1923380b8960bdf0a87b9d3d7690a',
-            'format' : 'iframe',
-            'height' : 50,
-            'width' : 320,
-            'params' : {}
-          };
+          atOptions = { 'key' : '77e1923380b8960bdf0a87b9d3d7690a', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
         </script>
         <script type="text/javascript" src="https://www.highrevenueformat.com/77e1923380b8960bdf0a87b9d3d7690a/invoke.js"></script>
     </div>
-</div>
 
-<!-- ⭐ AD ZONE 3 — 160x300 tall banner (high CPM) -->
-<div class="ad-zone tall" onclick="triggerAd()">
-    <div class="ad-inner">
+    <!-- Slot 3 — 160x300 tall -->
+    <div class="ad-slot tall">
         <script type="text/javascript">
-          atOptions = {
-            'key' : '633bc481966eea4b280085e5c79bf89c',
-            'format' : 'iframe',
-            'height' : 300,
-            'width' : 160,
-            'params' : {}
-          };
+          atOptions = { 'key' : '633bc481966eea4b280085e5c79bf89c', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
         </script>
         <script type="text/javascript" src="https://www.highrevenueformat.com/633bc481966eea4b280085e5c79bf89c/invoke.js"></script>
     </div>
-</div>
 
-<!-- ============================================================
-     SECTION 3 — How to install
-     ============================================================ -->
-<section class="section">
-    <h2 class="section-title">How To Install</h2>
-    <p class="section-sub">Three simple steps. Less than a minute.</p>
-
-    <div class="features">
-        <div class="feature-card" onclick="triggerAd()">
-            <div class="fc-icon">1️⃣</div>
-            <h3>Tap Download</h3>
-            <p>Press the download button anywhere on this page.</p>
-        </div>
-        <div class="feature-card" onclick="triggerAd()">
-            <div class="fc-icon">2️⃣</div>
-            <h3>Allow Install</h3>
-            <p>Your browser may ask permission — just tap Allow.</p>
-        </div>
-        <div class="feature-card" onclick="triggerAd()">
-            <div class="fc-icon">3️⃣</div>
-            <h3>Open & Enjoy</h3>
-            <p>Tap the app icon and you're ready to go.</p>
-        </div>
+    <!-- Slot 4 — Native #1 -->
+    <div class="ad-slot native-slot">
+        <script async="async" data-cfasync="false" src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"></script>
+        <div id="container-5ce2401bb3b7e539e2d1e749df8bbe29"></div>
     </div>
-</section>
 
-<!-- ⭐ AD ZONE 4 — Native banner (highest CPM) -->
-<div class="ad-zone" onclick="triggerAd()">
-    <div class="ad-inner">
-        <div class="native-container">
-            <script async="async" data-cfasync="false"
-                    src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"></script>
-            <div id="container-5ce2401bb3b7e539e2d1e749df8bbe29"></div>
-        </div>
-    </div>
-</div>
-
-<!-- Invisible click strip -->
-<div class="click-strip" onclick="triggerAd()"></div>
-
-<!-- ============================================================
-     SECTION 4 — Why choose
-     ============================================================ -->
-<section class="section">
-    <h2 class="section-title">Why People Love URA</h2>
-    <p class="section-sub">Real reasons from real users around the world.</p>
-
-    <div class="features">
-        <div class="feature-card" onclick="triggerAd()">
-            <div class="fc-icon">❤️</div>
-            <h3>Loved By Thousands</h3>
-            <p>Over 10,000 downloads in the first month alone.</p>
-        </div>
-        <div class="feature-card" onclick="triggerAd()">
-            <div class="fc-icon">⚡</div>
-            <h3>Zero Lag</h3>
-            <p>Optimized for smooth performance on any phone.</p>
-        </div>
-        <div class="feature-card" onclick="triggerAd()">
-            <div class="fc-icon">🛡️</div>
-            <h3>Privacy First</h3>
-            <p>We never sell your data. Period.</p>
-        </div>
-        <div class="feature-card" onclick="triggerAd()">
-            <div class="fc-icon">🎁</div>
-            <h3>Free Forever</h3>
-            <p>No subscriptions. No hidden fees. Just install and go.</p>
-        </div>
-    </div>
-</section>
-
-<!-- ⭐ AD ZONE 5 — Native banner again (loop) -->
-<div class="ad-zone" onclick="triggerAd()">
-    <div class="ad-inner">
-        <div class="native-container">
-            <script async="async" data-cfasync="false"
-                    src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"></script>
-            <div id="container-5ce2401bb3b7e539e2d1e749df8bbe29b"></div>
-        </div>
-    </div>
-</div>
-
-<!-- ============================================================
-     SECTION 5 — FAQ
-     ============================================================ -->
-<section class="section">
-    <h2 class="section-title">Frequently Asked</h2>
-    <p class="section-sub">Quick answers to common questions.</p>
-
-    <div class="features">
-        <div class="feature-card" onclick="triggerAd()">
-            <div class="fc-icon">❓</div>
-            <h3>Is it really free?</h3>
-            <p>Yes — 100% free. No hidden costs.</p>
-        </div>
-        <div class="feature-card" onclick="triggerAd()">
-            <div class="fc-icon">📦</div>
-            <h3>How big is it?</h3>
-            <p>Only 12 MB. Tiny and lightweight.</p>
-        </div>
-        <div class="feature-card" onclick="triggerAd()">
-            <div class="fc-icon">🔧</div>
-            <h3>Will it slow my phone?</h3>
-            <p>No. URA is optimized for low-end devices too.</p>
-        </div>
-        <div class="feature-card" onclick="triggerAd()">
-            <div class="fc-icon">🌐</div>
-            <h3>Do I need internet?</h3>
-            <p>Only for the first launch. Then works offline.</p>
-        </div>
-    </div>
-</section>
-
-<!-- ⭐ AD ZONE 6 — 468x60 banner -->
-<div class="ad-zone" onclick="triggerAd()">
-    <div class="ad-inner">
+    <!-- Slot 5 — 468x60 -->
+    <div class="ad-slot">
         <script type="text/javascript">
-          atOptions = {
-            'key' : 'ffd5efad0be666ffef826f5b8da79675',
-            'format' : 'iframe',
-            'height' : 60,
-            'width' : 468,
-            'params' : {}
-          };
+          atOptions = { 'key' : 'ffd5efad0be666ffef826f5b8da79675', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
         </script>
         <script type="text/javascript" src="https://www.highrevenueformat.com/ffd5efad0be666ffef826f5b8da79675/invoke.js"></script>
     </div>
+
+    <!-- Slot 6 — Native #2 -->
+    <div class="ad-slot native-slot">
+        <script async="async" data-cfasync="false" src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"></script>
+        <div id="container-5ce2401bb3b7e539e2d1e749df8bbe29b"></div>
+    </div>
+
+    <!-- Slot 7 — 320x50 -->
+    <div class="ad-slot">
+        <script type="text/javascript">
+          atOptions = { 'key' : '77e1923380b8960bdf0a87b9d3d7690a', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
+        </script>
+        <script type="text/javascript" src="https://www.highrevenueformat.com/77e1923380b8960bdf0a87b9d3d7690a/invoke.js"></script>
+    </div>
+
+    <!-- Slot 8 — 160x300 tall -->
+    <div class="ad-slot tall">
+        <script type="text/javascript">
+          atOptions = { 'key' : '633bc481966eea4b280085e5c79bf89c', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
+        </script>
+        <script type="text/javascript" src="https://www.highrevenueformat.com/633bc481966eea4b280085e5c79bf89c/invoke.js"></script>
+    </div>
+
+    <!-- Slot 9 — Native #3 -->
+    <div class="ad-slot native-slot">
+        <script async="async" data-cfasync="false" src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"></script>
+        <div id="container-5ce2401bb3b7e539e2d1e749df8bbe29c"></div>
+    </div>
+
+    <!-- Slot 10 — 468x60 -->
+    <div class="ad-slot">
+        <script type="text/javascript">
+          atOptions = { 'key' : 'ffd5efad0be666ffef826f5b8da79675', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
+        </script>
+        <script type="text/javascript" src="https://www.highrevenueformat.com/ffd5efad0be666ffef826f5b8da79675/invoke.js"></script>
+    </div>
+
+    <!-- Slot 11 — 320x50 -->
+    <div class="ad-slot">
+        <script type="text/javascript">
+          atOptions = { 'key' : '77e1923380b8960bdf0a87b9d3d7690a', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
+        </script>
+        <script type="text/javascript" src="https://www.highrevenueformat.com/77e1923380b8960bdf0a87b9d3d7690a/invoke.js"></script>
+    </div>
+
+    <!-- Slot 12 — Native #4 -->
+    <div class="ad-slot native-slot">
+        <script async="async" data-cfasync="false" src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"></script>
+        <div id="container-5ce2401bb3b7e539e2d1e749df8bbe29d"></div>
+    </div>
+
+    <!-- Slot 13 — 468x60 -->
+    <div class="ad-slot">
+        <script type="text/javascript">
+          atOptions = { 'key' : 'ffd5efad0be666ffef826f5b8da79675', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
+        </script>
+        <script type="text/javascript" src="https://www.highrevenueformat.com/ffd5efad0be666ffef826f5b8da79675/invoke.js"></script>
+    </div>
+
+    <!-- Slot 14 — 160x300 tall -->
+    <div class="ad-slot tall">
+        <script type="text/javascript">
+          atOptions = { 'key' : '633bc481966eea4b280085e5c79bf89c', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
+        </script>
+        <script type="text/javascript" src="https://www.highrevenueformat.com/633bc481966eea4b280085e5c79bf89c/invoke.js"></script>
+    </div>
+
+    <!-- Slot 15 — Native #5 -->
+    <div class="ad-slot native-slot">
+        <script async="async" data-cfasync="false" src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"></script>
+        <div id="container-5ce2401bb3b7e539e2d1e749df8bbe29e"></div>
+    </div>
+
+    <!-- Slot 16 — 320x50 -->
+    <div class="ad-slot">
+        <script type="text/javascript">
+          atOptions = { 'key' : '77e1923380b8960bdf0a87b9d3d7690a', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
+        </script>
+        <script type="text/javascript" src="https://www.highrevenueformat.com/77e1923380b8960bdf0a87b9d3d7690a/invoke.js"></script>
+    </div>
+
+    <!-- Slot 17 — 468x60 -->
+    <div class="ad-slot">
+        <script type="text/javascript">
+          atOptions = { 'key' : 'ffd5efad0be666ffef826f5b8da79675', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
+        </script>
+        <script type="text/javascript" src="https://www.highrevenueformat.com/ffd5efad0be666ffef826f5b8da79675/invoke.js"></script>
+    </div>
+
+    <!-- Slot 18 — Native #6 -->
+    <div class="ad-slot native-slot">
+        <script async="async" data-cfasync="false" src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"></script>
+        <div id="container-5ce2401bb3b7e539e2d1e749df8bbe29f"></div>
+    </div>
+
+    <!-- Slot 19 — 320x50 -->
+    <div class="ad-slot">
+        <script type="text/javascript">
+          atOptions = { 'key' : '77e1923380b8960bdf0a87b9d3d7690a', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
+        </script>
+        <script type="text/javascript" src="https://www.highrevenueformat.com/77e1923380b8960bdf0a87b9d3d7690a/invoke.js"></script>
+    </div>
+
+    <!-- Slot 20 — 160x300 tall -->
+    <div class="ad-slot tall">
+        <script type="text/javascript">
+          atOptions = { 'key' : '633bc481966eea4b280085e5c79bf89c', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
+        </script>
+        <script type="text/javascript" src="https://www.highrevenueformat.com/633bc481966eea4b280085e5c79bf89c/invoke.js"></script>
+    </div>
+
+    <!-- Slot 21 — Native #7 -->
+    <div class="ad-slot native-slot">
+        <script async="async" data-cfasync="false" src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"></script>
+        <div id="container-5ce2401bb3b7e539e2d1e749df8bbe29g"></div>
+    </div>
+
+    <!-- Slot 22 — 468x60 -->
+    <div class="ad-slot">
+        <script type="text/javascript">
+          atOptions = { 'key' : 'ffd5efad0be666ffef826f5b8da79675', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
+        </script>
+        <script type="text/javascript" src="https://www.highrevenueformat.com/ffd5efad0be666ffef826f5b8da79675/invoke.js"></script>
+    </div>
+
+    <!-- Slot 23 — 320x50 -->
+    <div class="ad-slot">
+        <script type="text/javascript">
+          atOptions = { 'key' : '77e1923380b8960bdf0a87b9d3d7690a', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
+        </script>
+        <script type="text/javascript" src="https://www.highrevenueformat.com/77e1923380b8960bdf0a87b9d3d7690a/invoke.js"></script>
+    </div>
+
+    <!-- Slot 24 — Native #8 -->
+    <div class="ad-slot native-slot">
+        <script async="async" data-cfasync="false" src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"></script>
+        <div id="container-5ce2401bb3b7e539e2d1e749df8bbe29h"></div>
+    </div>
+
+    <!-- Slot 25 — 468x60 -->
+    <div class="ad-slot">
+        <script type="text/javascript">
+          atOptions = { 'key' : 'ffd5efad0be666ffef826f5b8da79675', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
+        </script>
+        <script type="text/javascript" src="https://www.highrevenueformat.com/ffd5efad0be666ffef826f5b8da79675/invoke.js"></script>
+    </div>
+
+    <!-- Slot 26 — 160x300 tall -->
+    <div class="ad-slot tall">
+        <script type="text/javascript">
+          atOptions = { 'key' : '633bc481966eea4b280085e5c79bf89c', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
+        </script>
+        <script type="text/javascript" src="https://www.highrevenueformat.com/633bc481966eea4b280085e5c79bf89c/invoke.js"></script>
+    </div>
+
+    <!-- Slot 27 — Native #9 -->
+    <div class="ad-slot native-slot">
+        <script async="async" data-cfasync="false" src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"></script>
+        <div id="container-5ce2401bb3b7e539e2d1e749df8bbe29i"></div>
+    </div>
+
+    <!-- Slot 28 — 320x50 -->
+    <div class="ad-slot">
+        <script type="text/javascript">
+          atOptions = { 'key' : '77e1923380b8960bdf0a87b9d3d7690a', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
+        </script>
+        <script type="text/javascript" src="https://www.highrevenueformat.com/77e1923380b8960bdf0a87b9d3d7690a/invoke.js"></script>
+    </div>
+
+    <!-- Slot 29 — 468x60 -->
+    <div class="ad-slot">
+        <script type="text/javascript">
+          atOptions = { 'key' : 'ffd5efad0be666ffef826f5b8da79675', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
+        </script>
+        <script type="text/javascript" src="https://www.highrevenueformat.com/ffd5efad0be666ffef826f5b8da79675/invoke.js"></script>
+    </div>
+
+    <!-- Slot 30 — Native #10 -->
+    <div class="ad-slot native-slot">
+        <script async="async" data-cfasync="false" src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"></script>
+        <div id="container-5ce2401bb3b7e539e2d1e749df8bbe29j"></div>
+    </div>
+
 </div>
 
 <!-- ============================================================
-     FINAL CTA
+     FINAL CTA — REAL DOWNLOAD (no ads!)
      ============================================================ -->
 <section class="final-cta">
-    <h2>Get URA Today</h2>
+    <h2>Ready To Install?</h2>
     <p>Free · Android · 12 MB</p>
 
-    <!-- ⭐ DOWNLOAD — NO ad on click -->
-    <a class="download-btn"
-       href="/downloads/ura.apk"
+    <!-- ⭐ REAL DOWNLOAD — works perfectly, no ads -->
+    <a class="real-download-btn"
+       href="downloads/ura.apk"
        download="URA.apk"
        rel="noopener"
-       onclick="handleDownload(event)">
+       onclick="handleRealDownload(event)">
         <span class="icon">⬇</span>
         <span class="btn-text">
             <small>Android App · Free</small>
@@ -1150,21 +1020,10 @@ footer a {
     </a>
 </section>
 
-<!-- ⭐ AD ZONE 7 — Native + 320x50 -->
-<div class="ad-zone" onclick="triggerAd()">
-    <div class="ad-inner">
-        <div class="native-container">
-            <script async="async" data-cfasync="false"
-                    src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"></script>
-            <div id="container-5ce2401bb3b7e539e2d1e749df8bbe29c"></div>
-        </div>
-    </div>
-</div>
-
 <!-- ============================================================
-     FOOTER (clickable → ad)
+     FOOTER
      ============================================================ -->
-<footer onclick="triggerAd()">
+<footer>
     <div class="footer-brand">URA</div>
     <p>© 2025 URA. All rights reserved.</p>
     <p style="margin-top:6px; font-size: 11px; opacity: 0.6;">
@@ -1173,8 +1032,7 @@ footer a {
 </footer>
 
 <!-- ============================================================
-     POPUNDER — Highest income
-     Loads on any user interaction outside download button
+     POPUNDER — 8 seconds delay
      ============================================================ -->
 <script>
 let popunderLoaded = false;
@@ -1187,18 +1045,12 @@ function loadPopunder() {
     document.body.appendChild(s);
     console.log('✅ Popunder loaded');
 }
-// Load after 8s, OR after first scroll, whichever first
+// 8 seconds delay
 setTimeout(loadPopunder, 8000);
-window.addEventListener('scroll', function onS() {
-    if (window.scrollY > 100) {
-        loadPopunder();
-        window.removeEventListener('scroll', onS);
-    }
-}, { passive: true });
 </script>
 
 <!-- ============================================================
-     MAIN SCRIPT — Cats, Stars, Ads, Download
+     MAIN SCRIPT
      ============================================================ -->
 <script>
 /* ============================================================
@@ -1222,7 +1074,7 @@ window.addEventListener('scroll', function onS() {
 })();
 
 /* ============================================================
-   ⭐ CAT ARMY — 30 cats chaos mode
+   30 CATS
    ============================================================ */
 (function catArmy() {
     const zone = document.getElementById('catZone');
@@ -1237,31 +1089,24 @@ window.addEventListener('scroll', function onS() {
 
     function createCat(idx) {
         const cat = document.createElement('div');
-        const colorClass = COLORS[idx % COLORS.length];
-        cat.className = `cat ${colorClass}`;
+        cat.className = `cat ${COLORS[idx % COLORS.length]}`;
 
-        // random position (spread across hero)
         const x = Math.random() * 90 + 2;
         const y = Math.random() * 70 + 15;
         cat.style.left = x + '%';
         cat.style.top = y + '%';
 
-        // random animation speed + delay
         const dur = 5 + Math.random() * 10;
         cat.style.animationDuration = dur + 's';
         cat.style.animationDelay = (-Math.random() * dur) + 's';
 
-        // variant: sitting, running, sleeping
         const variant = Math.random();
         if (variant < 0.2) cat.classList.add('sitting');
         else if (variant < 0.5) cat.classList.add('running');
 
-        // scale
         const scale = 0.75 + Math.random() * 0.55;
         cat.style.transform = `scale(${scale})`;
-        cat.dataset.baseScale = scale;
 
-        // inner structure
         cat.innerHTML = `
             <div class="cat-body"></div>
             <div class="cat-head">
@@ -1277,7 +1122,6 @@ window.addEventListener('scroll', function onS() {
             <div class="bubble">${BUBBLES[Math.floor(Math.random() * BUBBLES.length)]}</div>
         `;
 
-        // ⭐ Click on cat = trigger ad
         cat.addEventListener('click', (e) => {
             e.stopPropagation();
             cat.classList.add('show-bubble');
@@ -1285,7 +1129,6 @@ window.addEventListener('scroll', function onS() {
             setTimeout(() => cat.classList.remove('show-bubble'), 1200);
         });
 
-        // Also on touch for mobile
         cat.addEventListener('touchstart', (e) => {
             e.stopPropagation();
             cat.classList.add('show-bubble');
@@ -1295,27 +1138,20 @@ window.addEventListener('scroll', function onS() {
 
         zone.appendChild(cat);
 
-        // Assign movement type
         const movementType = Math.floor(Math.random() * 4);
         const speed = 8 + Math.random() * 10;
 
         if (movementType === 0) {
-            // Wander in place
             cat.style.animationName = 'catWander';
             cat.style.animationDuration = speed + 's';
         } else if (movementType === 1) {
-            // Dash horizontally
             cat.style.animationName = 'catDash';
             cat.style.animationDuration = (6 + Math.random() * 4) + 's';
-            cat.style.animationIterationCount = 'infinite';
         } else if (movementType === 2) {
-            // Chase diagonally
             cat.style.animationName = 'catChase';
             cat.style.animationDuration = (7 + Math.random() * 5) + 's';
-            cat.style.animationIterationCount = 'infinite';
             cat.style.animationDirection = Math.random() > 0.5 ? 'alternate' : 'normal';
         } else {
-            // Sitting/wiggling
             cat.style.animationName = 'catWander';
             cat.style.animationDuration = (4 + Math.random() * 3) + 's';
         }
@@ -1325,7 +1161,7 @@ window.addEventListener('scroll', function onS() {
 
     for (let i = 0; i < TOTAL; i++) createCat(i);
 
-    // Periodically show a random cat bubble (auto-promote interaction)
+    // Auto-bubble spotlight
     setInterval(() => {
         const randomCat = cats[Math.floor(Math.random() * cats.length)];
         if (randomCat) {
@@ -1334,7 +1170,7 @@ window.addEventListener('scroll', function onS() {
         }
     }, 1800);
 
-    // Periodically reposition slow cats to keep the chaos alive
+    // Random reposition
     setInterval(() => {
         cats.forEach(cat => {
             if (Math.random() < 0.25) {
@@ -1346,25 +1182,20 @@ window.addEventListener('scroll', function onS() {
 })();
 
 /* ============================================================
-   AD TRIGGER — called from any clickable non-download zone
+   AD TRIGGER
    ============================================================ */
 function triggerAd() {
-    // Ensure popunder is loaded (highest income ad)
     loadPopunder();
-
-    // Small visual pulse to confirm click (optional)
-    // Popunder/Social bar will handle the actual impression
-    console.log('💰 Ad triggered by user click');
+    console.log('💰 Ad triggered');
 }
 
 /* ============================================================
-   DOWNLOAD HANDLER — NO ads here!
+   TOP "Download Free" — triggers ads, NOT download
    ============================================================ */
-function handleDownload(e) {
+function handleTopAdClick(e) {
+    e.preventDefault();
     e.stopPropagation();
-
-    // ⭐ IMPORTANT: We do NOT call loadPopunder() or triggerAd()
-    // The download button is ad-free as requested.
+    loadPopunder();
 
     const btn = e.currentTarget;
     btn.classList.add('downloading');
@@ -1372,13 +1203,36 @@ function handleDownload(e) {
     btn.innerHTML = `
         <span class="icon">⏳</span>
         <span class="btn-text">
-            <small>Starting download…</small>
+            <small>Loading…</small>
             <strong>Please wait</strong>
         </span>
     `;
 
     setTimeout(() => {
         btn.classList.remove('downloading');
+        btn.innerHTML = originalHTML;
+    }, 2500);
+}
+
+/* ============================================================
+   REAL DOWNLOAD — pure download, NO ads
+   ============================================================ */
+function handleRealDownload(e) {
+    // ⭐ NO triggerAd() call. NO loadPopunder(). Pure download.
+    e.stopPropagation();
+    console.log('✅ Real download initiated — no ad');
+
+    const btn = e.currentTarget;
+    const originalHTML = btn.innerHTML;
+    btn.innerHTML = `
+        <span class="icon">✅</span>
+        <span class="btn-text">
+            <small>Downloading…</small>
+            <strong>Check notifications</strong>
+        </span>
+    `;
+
+    setTimeout(() => {
         btn.innerHTML = originalHTML;
     }, 3000);
 }
@@ -1388,63 +1242,43 @@ function handleDownload(e) {
    ============================================================ */
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js')
+        navigator.serviceWorker.register('service-worker.js')
             .then(reg => console.log('✅ SW registered:', reg.scope))
             .catch(err => console.log('❌ SW failed:', err));
     });
 }
 
 /* ============================================================
-   INTERSECTION OBSERVER — reveal cards
+   ⭐ WHOLE PAGE CLICK → AD (except download button)
    ============================================================ */
-(function revealOnScroll() {
-    const cards = document.querySelectorAll('.feature-card');
-    if (!('IntersectionObserver' in window)) {
-        cards.forEach(c => { c.style.opacity = 1; c.style.transform = 'translateY(0)'; });
-        return;
-    }
-    const io = new IntersectionObserver((entries) => {
-        entries.forEach((entry, i) => {
-            if (entry.isIntersecting) {
-                entry.target.style.transition = `opacity 0.6s ease ${i * 0.06}s, transform 0.6s cubic-bezier(0.34,1.56,0.64,1) ${i * 0.06}s`;
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                io.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.12 });
+(function wholePageClickAd() {
+    document.body.addEventListener('click', function (e) {
+        // ⭐ Skip if clicked on the real download button
+        if (e.target.closest('.real-download-btn')) return;
 
-    cards.forEach(c => {
-        c.style.opacity = '0';
-        c.style.transform = 'translateY(30px)';
-        io.observe(c);
-    });
-})();
+        // ⭐ Skip if clicked on top download button (has own handler)
+        if (e.target.closest('#topAdButton')) return;
 
-/* ============================================================
-   HERO ZONE CLICK — anywhere in animation triggers ad
-   (but NOT download button — that's protected)
-   ============================================================ */
-(function heroClick() {
-    const hero = document.getElementById('heroZone');
-    if (!hero) return;
-
-    hero.addEventListener('click', (e) => {
-        // If click landed on download button, ignore
-        if (e.target.closest('.download-btn')) return;
-        // Otherwise, trigger ad (cat click handlers already stopPropagation)
+        // ⭐ Trigger ad for anywhere else on the page
         triggerAd();
-    });
+    }, true); // useCapture = true to catch early
 })();
 
 /* ============================================================
-   AD LOOP — refresh Native banners every 60s
+   NATIVE AD LOOP — refresh every 90s
    ============================================================ */
 (function loopNativeAds() {
     const ids = [
         'container-5ce2401bb3b7e539e2d1e749df8bbe29',
         'container-5ce2401bb3b7e539e2d1e749df8bbe29b',
-        'container-5ce2401bb3b7e539e2d1e749df8bbe29c'
+        'container-5ce2401bb3b7e539e2d1e749df8bbe29c',
+        'container-5ce2401bb3b7e539e2d1e749df8bbe29d',
+        'container-5ce2401bb3b7e539e2d1e749df8bbe29e',
+        'container-5ce2401bb3b7e539e2d1e749df8bbe29f',
+        'container-5ce2401bb3b7e539e2d1e749df8bbe29g',
+        'container-5ce2401bb3b7e539e2d1e749df8bbe29h',
+        'container-5ce2401bb3b7e539e2d1e749df8bbe29i',
+        'container-5ce2401bb3b7e539e2d1e749df8bbe29j'
     ];
 
     setInterval(() => {
@@ -1463,7 +1297,7 @@ if ('serviceWorker' in navigator) {
             }
         });
         console.log('🔄 Native ads refreshed');
-    }, 90000); // every 90 seconds
+    }, 90000);
 })();
 </script>
 
