@@ -4,20 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0b1120">
-<title>URA — Download</title>
-<meta name="description" content="URA — Secure Enterprise Ecosystem. Download the Android app free.">
+<title>URA — Install App</title>
 
 <link rel="manifest" href="/manifest.json">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="URA">
 
-<!-- ⭐ AD 1: Social Bar -->
+<!-- ⭐ AD: Social Bar (100% coverage) -->
 <script src="https://pl31508345.profitableratecpmnetwork.com/0a/88/b2/0a88b2a6521f14f0c652d063cc234ba8.js"></script>
 
 <style>
-/* ============================================================
-   BASE
-   ============================================================ */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -31,9 +28,7 @@
     --dim: #94a3b8;
     --accent: #6366f1;
     --gold: #fbbf24;
-    --gold-2: #f59e0b;
     --success: #22c55e;
-
     --safe-top: env(safe-area-inset-top, 0px);
     --safe-bottom: env(safe-area-inset-bottom, 0px);
 }
@@ -51,7 +46,6 @@ body {
         radial-gradient(circle at 20% 0%, rgba(99,102,241,0.12), transparent 50%),
         radial-gradient(circle at 80% 100%, rgba(251,191,36,0.08), transparent 50%);
     background-attachment: fixed;
-    /* ⭐ Whole page clickable for ad */
     cursor: pointer;
 }
 
@@ -63,7 +57,7 @@ body {
 }
 
 /* ============================================================
-   HERO — Cat playground
+   HERO
    ============================================================ */
 .hero {
     position: relative;
@@ -84,8 +78,7 @@ body {
     inset: 0;
     z-index: 0;
     background:
-        radial-gradient(ellipse at 50% 20%, #2a3d6e 0%, #1a2547 35%, #0b1120 70%),
-        linear-gradient(180deg, #0b1120 0%, #0b1120 100%);
+        radial-gradient(ellipse at 50% 20%, #2a3d6e 0%, #1a2547 35%, #0b1120 70%);
 }
 
 .stars {
@@ -118,14 +111,10 @@ body {
     width: 100%;
     height: 18vh;
     z-index: 2;
-    background: linear-gradient(180deg,
-        transparent 0%,
-        rgba(99,102,241,0.08) 40%,
-        rgba(99,102,241,0.22) 100%);
+    background: linear-gradient(180deg, transparent 0%, rgba(99,102,241,0.08) 40%, rgba(99,102,241,0.22) 100%);
     border-top: 1px solid rgba(99,102,241,0.2);
 }
 
-/* Trees */
 .tree { position: absolute; bottom: 12vh; z-index: 3; pointer-events: none; }
 .tree .trunk {
     position: absolute;
@@ -146,7 +135,6 @@ body {
     height: 70px;
     background: radial-gradient(circle at 40% 30%, #4ade80, #16a34a 60%, #065f46);
     border-radius: 50%;
-    box-shadow: 0 8px 20px rgba(34,197,94,0.3);
 }
 .tree.t-left  { left: 5%; transform: scale(0.9); }
 .tree.t-right { right: 5%; transform: scale(1); }
@@ -171,7 +159,6 @@ body {
     pointer-events: auto;
     cursor: pointer;
     animation: catWander 12s ease-in-out infinite;
-    transition: transform 0.3s;
 }
 
 .cat:active { transform: scale(1.2) !important; }
@@ -303,7 +290,6 @@ body {
     color: #1e293b;
     font-size: 9px;
     font-weight: 800;
-    letter-spacing: 0.3px;
     padding: 4px 8px;
     border-radius: 10px;
     white-space: nowrap;
@@ -313,31 +299,21 @@ body {
     z-index: 10;
     pointer-events: none;
 }
-
 .cat .bubble::after {
     content: '';
     position: absolute;
     bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
-    width: 0;
-    height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 6px solid #e0e7ff;
 }
-
 .cat:hover .bubble,
 .cat:active .bubble,
 .cat.show-bubble .bubble {
     opacity: 1;
     transform: translateX(-50%) scale(1);
-}
-
-.cat.running .tail { animation: tailRun 0.3s ease-in-out infinite; }
-@keyframes tailRun {
-    0%, 100% { transform: rotate(-35deg); }
-    50%      { transform: rotate(35deg); }
 }
 
 @keyframes catWander {
@@ -346,7 +322,6 @@ body {
     50%      { transform: translate(15px, 5px) rotate(2deg); }
     75%      { transform: translate(-20px, -4px) rotate(-2deg); }
 }
-
 @keyframes catDash {
     0%   { transform: translate(0, 0) scaleX(1); }
     45%  { transform: translate(200px, -10px) scaleX(1); }
@@ -354,15 +329,12 @@ body {
     95%  { transform: translate(5px, 10px) scaleX(-1); }
     100% { transform: translate(0, 0) scaleX(1); }
 }
-
 @keyframes catChase {
     0%   { transform: translate(0, 0) rotate(0deg); }
     100% { transform: translate(-300px, 40px) rotate(-8deg); }
 }
 
-/* ============================================================
-   HERO CONTENT
-   ============================================================ */
+/* HERO CONTENT */
 .hero-content {
     position: relative;
     z-index: 20;
@@ -388,12 +360,10 @@ body {
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 0 30px rgba(99,102,241,0.5));
 }
-
 .hero-title .dot {
     color: var(--gold);
     -webkit-text-fill-color: var(--gold);
 }
-
 .hero-sub {
     font-size: 14px;
     color: var(--dim);
@@ -413,14 +383,10 @@ body {
     border-radius: 22px;
     padding: 22px 20px 20px;
     backdrop-filter: blur(20px);
-    box-shadow:
-        0 24px 60px rgba(0,0,0,0.6),
-        0 0 40px rgba(99,102,241,0.15) inset,
-        0 1px 0 rgba(255,255,255,0.08) inset;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.6), 0 0 40px rgba(99,102,241,0.15) inset;
     position: relative;
     overflow: hidden;
 }
-
 .download-card::before {
     content: '';
     position: absolute;
@@ -431,7 +397,6 @@ body {
     background: linear-gradient(90deg, transparent, var(--accent), var(--gold), transparent);
     animation: shimmer 3s ease-in-out infinite;
 }
-
 @keyframes shimmer {
     0%   { left: -100%; }
     100% { left: 100%; }
@@ -448,13 +413,11 @@ body {
     text-transform: uppercase;
     font-weight: 600;
 }
-
 .download-meta span {
     display: flex;
     align-items: center;
     gap: 5px;
 }
-
 .download-meta .live-dot {
     width: 6px;
     height: 6px;
@@ -463,7 +426,6 @@ body {
     box-shadow: 0 0 8px var(--success);
     animation: pulseDot 1.5s ease-in-out infinite;
 }
-
 @keyframes pulseDot {
     0%, 100% { opacity: 1; }
     50%      { opacity: 0.4; }
@@ -483,17 +445,14 @@ body {
     border-radius: 16px;
     font-size: 17px;
     font-weight: 800;
-    letter-spacing: 0.4px;
     text-decoration: none;
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
-                box-shadow 0.25s ease;
-    box-shadow: 0 8px 24px rgba(251,191,36,0.45), 0 0 0 1px rgba(255,255,255,0.15) inset;
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+    box-shadow: 0 8px 24px rgba(251,191,36,0.45);
     font-family: inherit;
 }
-
 .download-btn::before {
     content: '';
     position: absolute;
@@ -502,7 +461,6 @@ body {
     transform: translateX(-100%);
     transition: transform 0.6s ease;
 }
-
 .download-btn:hover {
     transform: translateY(-3px) scale(1.02);
     box-shadow: 0 14px 36px rgba(251,191,36,0.6);
@@ -510,18 +468,13 @@ body {
 .download-btn:hover::before { transform: translateX(100%); }
 .download-btn:active { transform: translateY(-1px) scale(0.99); }
 
-.download-btn .icon {
-    font-size: 22px;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-}
-
+.download-btn .icon { font-size: 22px; }
 .download-btn .btn-text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     line-height: 1.15;
 }
-
 .download-btn .btn-text small {
     font-size: 10px;
     font-weight: 700;
@@ -529,27 +482,21 @@ body {
     opacity: 0.7;
     text-transform: uppercase;
 }
-
-.download-btn .btn-text strong {
-    font-size: 17px;
-    font-weight: 900;
-}
+.download-btn .btn-text strong { font-size: 17px; font-weight: 900; }
 
 .download-btn.downloading {
     pointer-events: none;
     background: linear-gradient(135deg, #22c55e, #16a34a);
     color: white;
 }
-
 .download-btn.downloading .icon { animation: bounceDl 0.6s ease infinite; }
-
 @keyframes bounceDl {
     0%, 100% { transform: translateY(0); }
     50%      { transform: translateY(4px); }
 }
 
 /* ============================================================
-   AD STACK — 30 slots
+   AD STACK — 100 SLOTS
    ============================================================ */
 .ad-stack {
     padding: 40px 16px;
@@ -562,7 +509,6 @@ body {
     position: relative;
     z-index: 4;
 }
-
 .ad-slot {
     width: 100%;
     display: flex;
@@ -575,23 +521,20 @@ body {
     border: 1px solid rgba(99,102,241,0.15);
     overflow: hidden;
 }
-
 .ad-slot.tall { min-height: 280px; }
-
 .ad-slot.native-slot {
     min-height: 120px;
     background: linear-gradient(160deg, rgba(30,41,59,0.35), rgba(15,23,42,0.55));
 }
 
 /* ============================================================
-   FINAL CTA — REAL DOWNLOAD (no ads!)
+   FINAL CTA — PWA install (REAL, no ads)
    ============================================================ */
 .final-cta {
     text-align: center;
     padding: 70px 24px 60px;
     background: radial-gradient(ellipse at 50% 100%, rgba(34,197,94,0.18) 0%, transparent 70%);
 }
-
 .final-cta h2 {
     font-size: clamp(28px, 6vw, 42px);
     font-weight: 900;
@@ -601,7 +544,6 @@ body {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
 .final-cta p {
     color: var(--dim);
     font-size: 14px;
@@ -611,8 +553,8 @@ body {
     font-weight: 500;
 }
 
-/* ⭐ REAL DOWNLOAD BUTTON (green, no ads) */
-.real-download-btn {
+/* ⭐ REAL PWA INSTALL BUTTON */
+.install-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -624,7 +566,6 @@ body {
     border-radius: 18px;
     font-size: 18px;
     font-weight: 800;
-    letter-spacing: 0.5px;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -635,8 +576,7 @@ body {
     position: relative;
     overflow: hidden;
 }
-
-.real-download-btn::before {
+.install-btn::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -644,42 +584,45 @@ body {
     transform: translateX(-100%);
     transition: transform 0.6s ease;
 }
-
-.real-download-btn:hover {
+.install-btn:hover {
     transform: translateY(-3px) scale(1.03);
     box-shadow: 0 16px 40px rgba(34,197,94,0.75);
 }
-.real-download-btn:hover::before { transform: translateX(100%); }
-.real-download-btn:active { transform: scale(0.99); }
+.install-btn:hover::before { transform: translateX(100%); }
+.install-btn:active { transform: scale(0.99); }
 
-.real-download-btn .icon {
-    font-size: 26px;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
-}
-
-.real-download-btn .btn-text {
+.install-btn .icon { font-size: 26px; }
+.install-btn .btn-text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     line-height: 1.15;
 }
-
-.real-download-btn .btn-text small {
+.install-btn .btn-text small {
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 1.5px;
     opacity: 0.85;
     text-transform: uppercase;
 }
+.install-btn .btn-text strong { font-size: 18px; font-weight: 900; }
 
-.real-download-btn .btn-text strong {
-    font-size: 18px;
-    font-weight: 900;
+.install-btn.installed {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    cursor: default;
 }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
+.install-hint {
+    margin-top: 14px;
+    font-size: 12px;
+    color: var(--dim);
+    letter-spacing: 0.5px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
 footer {
     padding: 30px 24px calc(30px + var(--safe-bottom));
     text-align: center;
@@ -689,7 +632,6 @@ footer {
     position: relative;
     z-index: 5;
 }
-
 footer .footer-brand {
     font-weight: 800;
     letter-spacing: 3px;
@@ -697,29 +639,23 @@ footer .footer-brand {
     margin-bottom: 6px;
 }
 
-/* ============================================================
-   MOBILE
-   ============================================================ */
 @media (max-width: 720px) {
     .cat { width: 44px; height: 38px; }
     .tree.t-left  { left: 2%; }
     .tree.t-right { right: 2%; }
 }
-
 @media (max-width: 480px) {
     .download-card { padding: 18px 16px; border-radius: 18px; }
     .download-btn { padding: 16px 18px; }
     .ad-stack { padding: 30px 12px; gap: 16px; }
     .cat { width: 40px; height: 34px; }
     .cat .bubble { font-size: 8px; padding: 3px 6px; }
-    .real-download-btn { padding: 18px 24px; font-size: 16px; }
+    .install-btn { padding: 18px 24px; font-size: 16px; }
 }
-
 @media (max-width: 380px) {
     .hero-title { font-size: 48px; }
     .download-meta span:nth-child(3) { display: none; }
 }
-
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         animation-duration: 0.01ms !important;
@@ -757,15 +693,15 @@ footer .footer-brand {
                 <span>• 12 MB</span>
             </div>
 
-            <!-- ⭐ TOP "DOWNLOAD FREE" — ads only, no download -->
-            <button id="topAdButton"
+            <!-- ⭐ TOP "INSTALL FREE" — PWA install triggers -->
+            <button id="topInstallBtn"
                     class="download-btn"
                     type="button"
-                    onclick="handleTopAdClick(event)">
+                    onclick="handleTopInstall(event)">
                 <span class="icon">⬇</span>
                 <span class="btn-text">
-                    <small>Android App</small>
-                    <strong>Download Free</strong>
+                    <small>Install App</small>
+                    <strong>Install Free</strong>
                 </span>
             </button>
         </div>
@@ -773,251 +709,32 @@ footer .footer-brand {
 </section>
 
 <!-- ============================================================
-     ⭐ 30 AD SLOTS — middle of page
+     ⭐ 100 AD SLOTS — generated by JS
      ============================================================ -->
-<div class="ad-stack" id="adStack">
-
-    <!-- Slot 1 — 468x60 -->
-    <div class="ad-slot">
-        <script type="text/javascript">
-          atOptions = { 'key' : 'ffd5efad0be666ffef826f5b8da79675', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
-        </script>
-        <script type="text/javascript" src="https://www.highrevenueformat.com/ffd5efad0be666ffef826f5b8da79675/invoke.js"></script>
-    </div>
-
-    <!-- Slot 2 — 320x50 -->
-    <div class="ad-slot">
-        <script type="text/javascript">
-          atOptions = { 'key' : '77e1923380b8960bdf0a87b9d3d7690a', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
-        </script>
-        <script type="text/javascript" src="https://www.highrevenueformat.com/77e1923380b8960bdf0a87b9d3d7690a/invoke.js"></script>
-    </div>
-
-    <!-- Slot 3 — 160x300 tall -->
-    <div class="ad-slot tall">
-        <script type="text/javascript">
-          atOptions = { 'key' : '633bc481966eea4b280085e5c79bf89c', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
-        </script>
-        <script type="text/javascript" src="https://www.highrevenueformat.com/633bc481966eea4b280085e5c79bf89c/invoke.js"></script>
-    </div>
-
-    <!-- Slot 4 — Native #1 -->
-    <div class="ad-slot native-slot">
-        <script async="async" data-cfasync="false" src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"></script>
-        <div id="container-5ce2401bb3b7e539e2d1e749df8bbe29"></div>
-    </div>
-
-    <!-- Slot 5 — 468x60 -->
-    <div class="ad-slot">
-        <script type="text/javascript">
-          atOptions = { 'key' : 'ffd5efad0be666ffef826f5b8da79675', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
-        </script>
-        <script type="text/javascript" src="https://www.highrevenueformat.com/ffd5efad0be666ffef826f5b8da79675/invoke.js"></script>
-    </div>
-
-    <!-- Slot 6 — Native #2 -->
-    <div class="ad-slot native-slot">
-        <script async="async" data-cfasync="false" src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"></script>
-        <div id="container-5ce2401bb3b7e539e2d1e749df8bbe29b"></div>
-    </div>
-
-    <!-- Slot 7 — 320x50 -->
-    <div class="ad-slot">
-        <script type="text/javascript">
-          atOptions = { 'key' : '77e1923380b8960bdf0a87b9d3d7690a', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
-        </script>
-        <script type="text/javascript" src="https://www.highrevenueformat.com/77e1923380b8960bdf0a87b9d3d7690a/invoke.js"></script>
-    </div>
-
-    <!-- Slot 8 — 160x300 tall -->
-    <div class="ad-slot tall">
-        <script type="text/javascript">
-          atOptions = { 'key' : '633bc481966eea4b280085e5c79bf89c', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
-        </script>
-        <script type="text/javascript" src="https://www.highrevenueformat.com/633bc481966eea4b280085e5c79bf89c/invoke.js"></script>
-    </div>
-
-    <!-- Slot 9 — Native #3 -->
-    <div class="ad-slot native-slot">
-        <script async="async" data-cfasync="false" src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"></script>
-        <div id="container-5ce2401bb3b7e539e2d1e749df8bbe29c"></div>
-    </div>
-
-    <!-- Slot 10 — 468x60 -->
-    <div class="ad-slot">
-        <script type="text/javascript">
-          atOptions = { 'key' : 'ffd5efad0be666ffef826f5b8da79675', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
-        </script>
-        <script type="text/javascript" src="https://www.highrevenueformat.com/ffd5efad0be666ffef826f5b8da79675/invoke.js"></script>
-    </div>
-
-    <!-- Slot 11 — 320x50 -->
-    <div class="ad-slot">
-        <script type="text/javascript">
-          atOptions = { 'key' : '77e1923380b8960bdf0a87b9d3d7690a', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
-        </script>
-        <script type="text/javascript" src="https://www.highrevenueformat.com/77e1923380b8960bdf0a87b9d3d7690a/invoke.js"></script>
-    </div>
-
-    <!-- Slot 12 — Native #4 -->
-    <div class="ad-slot native-slot">
-        <script async="async" data-cfasync="false" src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"></script>
-        <div id="container-5ce2401bb3b7e539e2d1e749df8bbe29d"></div>
-    </div>
-
-    <!-- Slot 13 — 468x60 -->
-    <div class="ad-slot">
-        <script type="text/javascript">
-          atOptions = { 'key' : 'ffd5efad0be666ffef826f5b8da79675', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
-        </script>
-        <script type="text/javascript" src="https://www.highrevenueformat.com/ffd5efad0be666ffef826f5b8da79675/invoke.js"></script>
-    </div>
-
-    <!-- Slot 14 — 160x300 tall -->
-    <div class="ad-slot tall">
-        <script type="text/javascript">
-          atOptions = { 'key' : '633bc481966eea4b280085e5c79bf89c', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
-        </script>
-        <script type="text/javascript" src="https://www.highrevenueformat.com/633bc481966eea4b280085e5c79bf89c/invoke.js"></script>
-    </div>
-
-    <!-- Slot 15 — Native #5 -->
-    <div class="ad-slot native-slot">
-        <script async="async" data-cfasync="false" src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"></script>
-        <div id="container-5ce2401bb3b7e539e2d1e749df8bbe29e"></div>
-    </div>
-
-    <!-- Slot 16 — 320x50 -->
-    <div class="ad-slot">
-        <script type="text/javascript">
-          atOptions = { 'key' : '77e1923380b8960bdf0a87b9d3d7690a', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
-        </script>
-        <script type="text/javascript" src="https://www.highrevenueformat.com/77e1923380b8960bdf0a87b9d3d7690a/invoke.js"></script>
-    </div>
-
-    <!-- Slot 17 — 468x60 -->
-    <div class="ad-slot">
-        <script type="text/javascript">
-          atOptions = { 'key' : 'ffd5efad0be666ffef826f5b8da79675', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
-        </script>
-        <script type="text/javascript" src="https://www.highrevenueformat.com/ffd5efad0be666ffef826f5b8da79675/invoke.js"></script>
-    </div>
-
-    <!-- Slot 18 — Native #6 -->
-    <div class="ad-slot native-slot">
-        <script async="async" data-cfasync="false" src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"></script>
-        <div id="container-5ce2401bb3b7e539e2d1e749df8bbe29f"></div>
-    </div>
-
-    <!-- Slot 19 — 320x50 -->
-    <div class="ad-slot">
-        <script type="text/javascript">
-          atOptions = { 'key' : '77e1923380b8960bdf0a87b9d3d7690a', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
-        </script>
-        <script type="text/javascript" src="https://www.highrevenueformat.com/77e1923380b8960bdf0a87b9d3d7690a/invoke.js"></script>
-    </div>
-
-    <!-- Slot 20 — 160x300 tall -->
-    <div class="ad-slot tall">
-        <script type="text/javascript">
-          atOptions = { 'key' : '633bc481966eea4b280085e5c79bf89c', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
-        </script>
-        <script type="text/javascript" src="https://www.highrevenueformat.com/633bc481966eea4b280085e5c79bf89c/invoke.js"></script>
-    </div>
-
-    <!-- Slot 21 — Native #7 -->
-    <div class="ad-slot native-slot">
-        <script async="async" data-cfasync="false" src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"></script>
-        <div id="container-5ce2401bb3b7e539e2d1e749df8bbe29g"></div>
-    </div>
-
-    <!-- Slot 22 — 468x60 -->
-    <div class="ad-slot">
-        <script type="text/javascript">
-          atOptions = { 'key' : 'ffd5efad0be666ffef826f5b8da79675', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
-        </script>
-        <script type="text/javascript" src="https://www.highrevenueformat.com/ffd5efad0be666ffef826f5b8da79675/invoke.js"></script>
-    </div>
-
-    <!-- Slot 23 — 320x50 -->
-    <div class="ad-slot">
-        <script type="text/javascript">
-          atOptions = { 'key' : '77e1923380b8960bdf0a87b9d3d7690a', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
-        </script>
-        <script type="text/javascript" src="https://www.highrevenueformat.com/77e1923380b8960bdf0a87b9d3d7690a/invoke.js"></script>
-    </div>
-
-    <!-- Slot 24 — Native #8 -->
-    <div class="ad-slot native-slot">
-        <script async="async" data-cfasync="false" src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"></script>
-        <div id="container-5ce2401bb3b7e539e2d1e749df8bbe29h"></div>
-    </div>
-
-    <!-- Slot 25 — 468x60 -->
-    <div class="ad-slot">
-        <script type="text/javascript">
-          atOptions = { 'key' : 'ffd5efad0be666ffef826f5b8da79675', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
-        </script>
-        <script type="text/javascript" src="https://www.highrevenueformat.com/ffd5efad0be666ffef826f5b8da79675/invoke.js"></script>
-    </div>
-
-    <!-- Slot 26 — 160x300 tall -->
-    <div class="ad-slot tall">
-        <script type="text/javascript">
-          atOptions = { 'key' : '633bc481966eea4b280085e5c79bf89c', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
-        </script>
-        <script type="text/javascript" src="https://www.highrevenueformat.com/633bc481966eea4b280085e5c79bf89c/invoke.js"></script>
-    </div>
-
-    <!-- Slot 27 — Native #9 -->
-    <div class="ad-slot native-slot">
-        <script async="async" data-cfasync="false" src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"></script>
-        <div id="container-5ce2401bb3b7e539e2d1e749df8bbe29i"></div>
-    </div>
-
-    <!-- Slot 28 — 320x50 -->
-    <div class="ad-slot">
-        <script type="text/javascript">
-          atOptions = { 'key' : '77e1923380b8960bdf0a87b9d3d7690a', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
-        </script>
-        <script type="text/javascript" src="https://www.highrevenueformat.com/77e1923380b8960bdf0a87b9d3d7690a/invoke.js"></script>
-    </div>
-
-    <!-- Slot 29 — 468x60 -->
-    <div class="ad-slot">
-        <script type="text/javascript">
-          atOptions = { 'key' : 'ffd5efad0be666ffef826f5b8da79675', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
-        </script>
-        <script type="text/javascript" src="https://www.highrevenueformat.com/ffd5efad0be666ffef826f5b8da79675/invoke.js"></script>
-    </div>
-
-    <!-- Slot 30 — Native #10 -->
-    <div class="ad-slot native-slot">
-        <script async="async" data-cfasync="false" src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"></script>
-        <div id="container-5ce2401bb3b7e539e2d1e749df8bbe29j"></div>
-    </div>
-
-</div>
+<div class="ad-stack" id="adStack"></div>
 
 <!-- ============================================================
-     FINAL CTA — REAL DOWNLOAD (no ads!)
+     FINAL CTA — REAL PWA INSTALL
      ============================================================ -->
 <section class="final-cta">
     <h2>Ready To Install?</h2>
-    <p>Free · Android · 12 MB</p>
+    <p>Free · Fast · No Download</p>
 
-    <!-- ⭐ REAL DOWNLOAD — works perfectly, no ads -->
-    <a class="real-download-btn"
-       href="downloads/ura.apk"
-       download="URA.apk"
-       rel="noopener"
-       onclick="handleRealDownload(event)">
-        <span class="icon">⬇</span>
+    <!-- ⭐ REAL PWA INSTALL — no ads -->
+    <button id="realInstallBtn"
+            class="install-btn"
+            type="button"
+            onclick="handleRealInstall(event)">
+        <span class="icon">📲</span>
         <span class="btn-text">
-            <small>Android App · Free</small>
-            <strong>Download Now</strong>
+            <small>Progressive Web App</small>
+            <strong>Install Now</strong>
         </span>
-    </a>
+    </button>
+
+    <p class="install-hint" id="installHint">
+        Tap above to install URA as an app on your device.
+    </p>
 </section>
 
 <!-- ============================================================
@@ -1027,12 +744,12 @@ footer .footer-brand {
     <div class="footer-brand">URA</div>
     <p>© 2025 URA. All rights reserved.</p>
     <p style="margin-top:6px; font-size: 11px; opacity: 0.6;">
-        Android · iOS &amp; Windows coming soon
+        Progressive Web App · Install from browser
     </p>
 </footer>
 
 <!-- ============================================================
-     POPUNDER — 8 seconds delay
+     POPUNDER — 8s delay
      ============================================================ -->
 <script>
 let popunderLoaded = false;
@@ -1045,7 +762,6 @@ function loadPopunder() {
     document.body.appendChild(s);
     console.log('✅ Popunder loaded');
 }
-// 8 seconds delay
 setTimeout(loadPopunder, 8000);
 </script>
 
@@ -1053,6 +769,13 @@ setTimeout(loadPopunder, 8000);
      MAIN SCRIPT
      ============================================================ -->
 <script>
+/* ============================================================
+   STATE
+   ============================================================ */
+let deferredInstallPrompt = null;
+const isStandalone = window.matchMedia('(display-mode: standalone)').matches
+                  || window.navigator.standalone === true;
+
 /* ============================================================
    STARS
    ============================================================ */
@@ -1102,7 +825,6 @@ setTimeout(loadPopunder, 8000);
 
         const variant = Math.random();
         if (variant < 0.2) cat.classList.add('sitting');
-        else if (variant < 0.5) cat.classList.add('running');
 
         const scale = 0.75 + Math.random() * 0.55;
         cat.style.transform = `scale(${scale})`;
@@ -1161,7 +883,6 @@ setTimeout(loadPopunder, 8000);
 
     for (let i = 0; i < TOTAL; i++) createCat(i);
 
-    // Auto-bubble spotlight
     setInterval(() => {
         const randomCat = cats[Math.floor(Math.random() * cats.length)];
         if (randomCat) {
@@ -1170,7 +891,6 @@ setTimeout(loadPopunder, 8000);
         }
     }, 1800);
 
-    // Random reposition
     setInterval(() => {
         cats.forEach(cat => {
             if (Math.random() < 0.25) {
@@ -1182,6 +902,66 @@ setTimeout(loadPopunder, 8000);
 })();
 
 /* ============================================================
+   ⭐ BUILD 100 AD SLOTS
+   ============================================================ */
+(function build100AdSlots() {
+    const stack = document.getElementById('adStack');
+    const types = ['468x60', '320x50', '160x300', 'native'];
+
+    for (let i = 0; i < 100; i++) {
+        const slot = document.createElement('div');
+        const type = types[i % types.length];
+
+        if (type === '468x60') {
+            slot.className = 'ad-slot';
+            slot.innerHTML = `
+                <script type="text/javascript">
+                  atOptions = { 'key' : 'ffd5efad0be666ffef826f5b8da79675', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
+                <\/script>
+                <script type="text/javascript" src="https://www.highrevenueformat.com/ffd5efad0be666ffef826f5b8da79675/invoke.js"><\/script>
+            `;
+        } else if (type === '320x50') {
+            slot.className = 'ad-slot';
+            slot.innerHTML = `
+                <script type="text/javascript">
+                  atOptions = { 'key' : '77e1923380b8960bdf0a87b9d3d7690a', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
+                <\/script>
+                <script type="text/javascript" src="https://www.highrevenueformat.com/77e1923380b8960bdf0a87b9d3d7690a/invoke.js"><\/script>
+            `;
+        } else if (type === '160x300') {
+            slot.className = 'ad-slot tall';
+            slot.innerHTML = `
+                <script type="text/javascript">
+                  atOptions = { 'key' : '633bc481966eea4b280085e5c79bf89c', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
+                <\/script>
+                <script type="text/javascript" src="https://www.highrevenueformat.com/633bc481966eea4b280085e5c79bf89c/invoke.js"><\/script>
+            `;
+        } else {
+            const containerId = 'native-' + i + '-' + Math.random().toString(36).slice(2, 8);
+            slot.className = 'ad-slot native-slot';
+            slot.innerHTML = `
+                <script async="async" data-cfasync="false" src="https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js"><\/script>
+                <div id="${containerId}"></div>
+            `;
+        }
+
+        // Make slot clickable for ad
+        slot.addEventListener('click', triggerAd);
+        stack.appendChild(slot);
+    }
+
+    // Re-execute all inline scripts inside slots
+    stack.querySelectorAll('script').forEach(oldScript => {
+        if (oldScript.src) return; // skip src scripts (they run automatically)
+        const newScript = document.createElement('script');
+        newScript.textContent = oldScript.textContent;
+        oldScript.parentNode.replaceChild(newScript, oldScript);
+    });
+
+    console.log('✅ 100 ad slots created');
+})();
+
+/* ============================================================
    AD TRIGGER
    ============================================================ */
 function triggerAd() {
@@ -1190,11 +970,13 @@ function triggerAd() {
 }
 
 /* ============================================================
-   TOP "Download Free" — triggers ads, NOT download
+   ⭐ TOP INSTALL BUTTON — triggers ad, NOT install
    ============================================================ */
-function handleTopAdClick(e) {
+function handleTopInstall(e) {
     e.preventDefault();
     e.stopPropagation();
+
+    // ⭐ Ad trigger only (no install prompt here)
     loadPopunder();
 
     const btn = e.currentTarget;
@@ -1215,90 +997,107 @@ function handleTopAdClick(e) {
 }
 
 /* ============================================================
-   REAL DOWNLOAD — pure download, NO ads
+   ⭐ REAL PWA INSTALL — triggers Chrome's native install prompt
    ============================================================ */
-function handleRealDownload(e) {
-    // ⭐ NO triggerAd() call. NO loadPopunder(). Pure download.
+async function handleRealInstall(e) {
     e.stopPropagation();
-    console.log('✅ Real download initiated — no ad');
 
-    const btn = e.currentTarget;
-    const originalHTML = btn.innerHTML;
-    btn.innerHTML = `
-        <span class="icon">✅</span>
-        <span class="btn-text">
-            <small>Downloading…</small>
-            <strong>Check notifications</strong>
-        </span>
-    `;
+    // If already installed
+    if (isStandalone) {
+        updateInstallBtnInstalled();
+        return;
+    }
 
-    setTimeout(() => {
-        btn.innerHTML = originalHTML;
-    }, 3000);
+    // If browser gave us the install prompt
+    if (deferredInstallPrompt) {
+        deferredInstallPrompt.prompt();
+        const { outcome } = await deferredInstallPrompt.userChoice;
+        console.log('Install choice:', outcome);
+
+        if (outcome === 'accepted') {
+            updateInstallBtnInstalled();
+        }
+
+        deferredInstallPrompt = null;
+        return;
+    }
+
+    // No prompt available — show manual instructions
+    showManualInstallHint();
 }
 
 /* ============================================================
-   SERVICE WORKER
+   PWA INSTALL PROMPT (Chrome)
+   ============================================================ */
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredInstallPrompt = e;
+    console.log('✅ Install prompt captured');
+});
+
+window.addEventListener('appinstalled', () => {
+    console.log('🎉 PWA installed!');
+    updateInstallBtnInstalled();
+});
+
+function updateInstallBtnInstalled() {
+    const btn = document.getElementById('realInstallBtn');
+    if (!btn) return;
+    btn.classList.add('installed');
+    btn.innerHTML = `
+        <span class="icon">✅</span>
+        <span class="btn-text">
+            <small>Installed</small>
+            <strong>Open App</strong>
+        </span>
+    `;
+    const hint = document.getElementById('installHint');
+    if (hint) hint.textContent = 'URA is installed! Open it from your home screen.';
+}
+
+function showManualInstallHint() {
+    const hint = document.getElementById('installHint');
+    if (!hint) return;
+
+    const ua = navigator.userAgent;
+    const isIOS = /iPad|iPhone|iPod/.test(ua);
+
+    if (isIOS) {
+        hint.innerHTML = '📱 <strong>iOS:</strong> Tap Share (□↑) → "Add to Home Screen" → Add';
+    } else {
+        hint.innerHTML = '💻 <strong>Install:</strong> Open browser menu (⋮) → "Install app" or "Add to Home screen"';
+    }
+}
+
+/* ============================================================
+   ⭐ WHOLE PAGE CLICK → AD (except install buttons)
+   ============================================================ */
+document.body.addEventListener('click', function (e) {
+    // Skip if clicked on real install button
+    if (e.target.closest('#realInstallBtn')) return;
+    // Skip if clicked on top install button (has own handler)
+    if (e.target.closest('#topInstallBtn')) return;
+    // Otherwise trigger ad
+    triggerAd();
+}, true);
+
+/* ============================================================
+   SERVICE WORKER — required for PWA install
    ============================================================ */
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('service-worker.js')
+        navigator.serviceWorker.register('/service-worker.js')
             .then(reg => console.log('✅ SW registered:', reg.scope))
             .catch(err => console.log('❌ SW failed:', err));
     });
 }
 
 /* ============================================================
-   ⭐ WHOLE PAGE CLICK → AD (except download button)
+   CHECK INSTALL STATUS ON LOAD
    ============================================================ */
-(function wholePageClickAd() {
-    document.body.addEventListener('click', function (e) {
-        // ⭐ Skip if clicked on the real download button
-        if (e.target.closest('.real-download-btn')) return;
-
-        // ⭐ Skip if clicked on top download button (has own handler)
-        if (e.target.closest('#topAdButton')) return;
-
-        // ⭐ Trigger ad for anywhere else on the page
-        triggerAd();
-    }, true); // useCapture = true to catch early
-})();
-
-/* ============================================================
-   NATIVE AD LOOP — refresh every 90s
-   ============================================================ */
-(function loopNativeAds() {
-    const ids = [
-        'container-5ce2401bb3b7e539e2d1e749df8bbe29',
-        'container-5ce2401bb3b7e539e2d1e749df8bbe29b',
-        'container-5ce2401bb3b7e539e2d1e749df8bbe29c',
-        'container-5ce2401bb3b7e539e2d1e749df8bbe29d',
-        'container-5ce2401bb3b7e539e2d1e749df8bbe29e',
-        'container-5ce2401bb3b7e539e2d1e749df8bbe29f',
-        'container-5ce2401bb3b7e539e2d1e749df8bbe29g',
-        'container-5ce2401bb3b7e539e2d1e749df8bbe29h',
-        'container-5ce2401bb3b7e539e2d1e749df8bbe29i',
-        'container-5ce2401bb3b7e539e2d1e749df8bbe29j'
-    ];
-
-    setInterval(() => {
-        ids.forEach(id => {
-            const container = document.getElementById(id);
-            if (!container) return;
-            const rect = container.getBoundingClientRect();
-            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-            if (!isVisible) {
-                container.innerHTML = '';
-                const s = document.createElement('script');
-                s.async = true;
-                s.dataset.cfasync = 'false';
-                s.src = 'https://pl31508346.profitableratecpmnetwork.com/5ce2401bb3b7e539e2d1e749df8bbe29/invoke.js';
-                document.body.appendChild(s);
-            }
-        });
-        console.log('🔄 Native ads refreshed');
-    }, 90000);
-})();
+if (isStandalone) {
+    updateInstallBtnInstalled();
+}
 </script>
 
 </body>
